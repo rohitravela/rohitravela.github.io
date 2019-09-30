@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Your project is being built !' 
             }
+        }
         stage('Test') {
             steps {
                 echo 'Your project is being tested !'
