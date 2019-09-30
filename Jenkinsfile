@@ -16,6 +16,5 @@ pipeline {
                 echo 'Your project is being deployed !'
             } 
         }
-        }
     }
 }
