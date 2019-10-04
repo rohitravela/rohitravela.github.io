@@ -6,7 +6,7 @@ node {
             
             stage 'Checkout'
         
-            git url: 'https://github.com/kns-1/jenkins_pipeline.git'
+            git url: 'https://github.com/rohitravela/rohitravela.github.io.git'
         
             stage 'preTest'
             sh 'go version'
@@ -15,7 +15,7 @@ node {
             
             
             stage 'Build'
-		sh 'git clone https://github.com/kns-1/jenkins_pipeline.git'
+		sh 'git clone https://github.com/rohitravela/rohitravela.github.io.git'
 		sh 'cd jenkins_pipeline'
 		sh 'go build ./hello.go'
 		sh 'ls'
@@ -23,7 +23,7 @@ node {
 		sh 'curl -fL https://getcli.jfrog.io | sh'
 		
 		sh './jfrog'
-		sh './jfrog rt u hello example-repo-local/ --user=admin --password=password --url=http://192.168.99.105:8081/artifactory'
+		sh './jfrog rt u hello example-repo-local/ --user=admin --password=password --url=http://192.168.99.100:8081/artifactory'
 
 		//sh './hello.exe"
            // sh 'go run hello.go'
